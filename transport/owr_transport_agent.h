@@ -44,13 +44,6 @@ typedef enum _OwrHelperServerType {
     OWR_HELPER_SERVER_TYPE_TURN_TCP
 } OwrHelperServerType;
 
-typedef enum _OwrHelperBundlePolicyType {
-    OWR_BUNDLE_POLICY_TYPE_BALANCED,
-    OWR_BUNDLE_POLICY_TYPE_MAX_COMPAT,
-    OWR_BUNDLE_POLICY_TYPE_MAX_BUNDLE
-} OwrHelperBundlePolicyType;
-
-
 #define OWR_TYPE_TRANSPORT_AGENT            (owr_transport_agent_get_type())
 #define OWR_TRANSPORT_AGENT(obj)            (G_TYPE_CHECK_INSTANCE_CAST((obj), OWR_TYPE_TRANSPORT_AGENT, OwrTransportAgent))
 #define OWR_TRANSPORT_AGENT_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST((klass), OWR_TYPE_TRANSPORT_AGENT, OwrTransportAgentClass))

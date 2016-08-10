@@ -345,9 +345,9 @@ static void owr_transport_agent_class_init(OwrTransportAgentClass *klass)
         "Ice controlling mode", "Whether the ice agent is in controlling mode",
         DEFAULT_ICE_CONTROLLING_MODE, G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
 
-    obj_properties[PROP_BUNDLE_POLICY] = g_param_spec_boolean("bundle-policy",
+    obj_properties[PROP_BUNDLE_POLICY] = g_param_spec_enum("bundle-policy", "bundle-policy"
         "Bundle policy of the data streams", "What kind of bundle policy we will use for the streams",
-        DEFAULT_BUNDLE_POLICY, G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
+        OWR_TYPE_BUNDLE_POLICY_TYPE, DEFAULT_BUNDLE_POLICY, G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
 
     gobject_class->set_property = owr_transport_agent_set_property;
     gobject_class->get_property = owr_transport_agent_get_property;
